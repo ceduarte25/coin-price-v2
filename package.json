@@ -9,12 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.4"
+    "axios": "^1.7.2",
+    "babel-plugin-react-compiler": "^0.0.0-experimental-938cd9a-20240601",
+    "next": "^15.0.0-rc.0",
+    "react": "^19.0.0-rc-107a2f8c3e-20240617",
+    "react-dom": "^19.0.0-rc-107a2f8c3e-20240617"
   },
   "devDependencies": {
-    "eslint": "^8",
-    "eslint-config-next": "14.2.4"
+    "eslint": "^9.5.0",
+    "eslint-config-next": "^15.0.0-rc.0"
   }
 }
