@@ -1,0 +1,1 @@
+export const INPUT_TITLES = { START: 'Start Date', END: 'End Date' };
