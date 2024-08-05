@@ -1,7 +1,7 @@
 'use client'
 
 import { Box, styled, TextField, Typography } from '@mui/material'
-import { INPUT_TITLES } from '@/constants'
+import { INPUT_TITLES } from '../../constants'
 
 const FlexColumn = styled(Box)(() => ({
   display: 'flex',
@@ -20,7 +20,7 @@ const DateFieldInput = ({ title, handleChange }) => {
       <Typography variant='subtitle2'>
         format: YYYY-MM-DD (ex: 2024-06-18)
       </Typography>
-      <TextField onChange={handleChange} />
+      <TextField onChange={(e) => handleChange(e.target.value)} />
     </FlexColumn>
   )
 }

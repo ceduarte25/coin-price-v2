@@ -2,18 +2,18 @@ import axios from "axios";
 import React, { useReducer, createContext } from 'react';
 
 const initalState = {
-  dailyOpening: {},
-  averagePrice: 0,
+  dailyOpening: null,
+  averagePrice: null,
 };
 
 const ACTIONS = {
-  SET_OPENING_PRICE: 'SET_OPENING_PRICE',
+  SET_DAILY_OPENING: 'SET_DAILY_OPENING',
   SET_AVERAGE_PRICE: 'SET_AVERAGE_PRICE',
 };
 
 const OpeningPriceReducer = (state, action) => {
   switch (action.type) {
-    case ACTIONS.SET_OPENING_PRICE:
+    case ACTIONS.SET_DAILY_OPENING:
       return {
         ...state,
         dailyOpening: action.payload,
@@ -40,7 +40,8 @@ export const OpeningPriceProvider = ({ children }) => {
         endDate,
       }
     });
-    console.log(response.data);
+    dispatch({ type: ACTIONS.SET_DAILY_OPENING, payload: response.data.dailyOpening });
+    dispatch({ type: ACTIONS.SET_AVERAGE_PRICE, payload: response.data.averagePrice });
   };
 
 
