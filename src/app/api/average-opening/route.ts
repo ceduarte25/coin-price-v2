@@ -16,7 +16,7 @@ async function fetchDailyData(apiKey) {
   return response.data['Time Series (Digital Currency Daily)']
 }
 
-export async function GET(req: NextRequest, res: NextResponse) {
+export async function GET(req: NextRequest) {
   const url = new URL(req.url)
   const searchParams = new URLSearchParams(url.searchParams)
   const startDate = searchParams.get('startDate')
