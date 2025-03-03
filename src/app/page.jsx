@@ -49,7 +49,7 @@ export default function Home() {
       <OpeningPriceProvider>
         <Wrapper>
           <Typography variant='h1' fontSize='24px'>
-            Calculate average opening daily price of a cryptocurrency
+            Calculate average opening daily price of a Ethereum
           </Typography>
           <DateField setStartDate={setStartDate} setEndDate={setEndDate} />
           <CalculateButton startDate={startDate} endDate={endDate} />
